@@ -35,6 +35,7 @@ public class PrecedenciaOperadores {
         System.out.println("\nOtro ejemplo");
         //Si detecta una cadena, lo demas lo convierte en cadana
         System.out.println("1 + 2 = " + 1 + 2);
+		
         //Los parentesis rompen esta regla, ya que tiene la mayor prioridad
         System.out.println("(1 + 2) = " + (1 + 2));
 
