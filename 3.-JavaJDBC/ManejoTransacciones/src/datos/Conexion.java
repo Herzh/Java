@@ -11,7 +11,6 @@ import java.sql.*;
  * @author ALUCI
  */
 public class Conexion {
-	//Valores de conexion a MySql
 	private static String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 	private static String JDBC_URL = "jdbc:mysql://localhost:3306/sga?useSSL=false";
 	private static String JDBC_USER = "root";
@@ -33,7 +32,6 @@ public class Conexion {
 		return DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASS);
 	}
 	
-	//Cierre del resultSet
 	public static void close(ResultSet rs){
 		try{
 			if(rs != null){
@@ -44,7 +42,6 @@ public class Conexion {
 		}
 	}
 	
-	//Cierre del PrepareStatement
 	public static void close(PreparedStatement stmt){
 		try{
 			if(stmt != null){
