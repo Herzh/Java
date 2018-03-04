@@ -12,9 +12,7 @@ package personas.dto;
 public class PersonaDTO {
 	
 	private int id_persona;
-
     private String nombre;
-
     private String apellido;
 	
 	public PersonaDTO() {

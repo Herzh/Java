@@ -26,15 +26,15 @@ public class TestPersonas {
         //a una clase concreta
         PersonaDao personaDao = new PersonaDaoJDBC();
 
-        //Creamos un nuevo registro
-        //Hacemos uso de la clase persona DTO la cual se usa
-        //para transferiri la informacion entre las capas
-        //no es necesario especificar la llave primaria
-        //ya que en este caso es de tipo autonumerico y la BD se encarga
-        //de asignarle un nuevo valor
+        /*Creamos un nuevo registro
+        Hacemos uso de la clase persona DTO la cual se usa
+        para transferiri la informacion entre las capas
+        no es necesario especificar la llave primaria
+        ya que en este caso es de tipo autonumerico y la BD se encarga
+        de asignarle un nuevo valor*/
         PersonaDTO persona = new PersonaDTO();
-        persona.setNombre("mario");
-        persona.setApellido("lopez01");
+        persona.setNombre("new12");
+        persona.setApellido("unwee");
         
 		//Utilizamos la capa DAO para persistir el objeto DTO
         try {
@@ -46,16 +46,16 @@ public class TestPersonas {
                 System.out.println();
             }
 			
-            personaDao.insert(persona);
+            //personaDao.insert(persona);
 
             //eliminamos un registro, el id 8
             //personaDao.delete( new PersonaDTO(8));
             
-            //actualizamos un registro
+            //Actualizamos un registro
              PersonaDTO personaTmp= new PersonaDTO();
-             personaTmp.setId_persona(1);			//actualizamos el registro 2
-             personaTmp.setNombre("Mario");
-             personaTmp.setApellido("lopez02");
+             personaTmp.setId_persona(11);			//actualizamos el registro 2
+             personaTmp.setNombre("new11");
+             personaTmp.setApellido("unwe11");
              personaDao.update(personaTmp);
             
             //Seleccionamos todos los registros
